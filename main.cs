@@ -9,10 +9,13 @@ class MainClass {
       validaCad = ideia.cadIdeia();
     }
 
-    bool visualizaIdeias = true;
-    while(visualizaIdeias == true){
+    bool visualizaIdeias = false;
+    while(visualizaIdeias == false){
       ideia.getIdeia();
-      ideia.curtir();
+      visualizaIdeias = ideia.curtir();
+
+      visualizaIdeias = ideia.votarNovamente();
+      ideia.exibeRanking();
     }
   }
 }
